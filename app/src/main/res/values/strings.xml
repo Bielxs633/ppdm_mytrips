@@ -2,7 +2,7 @@
     <string name="login">Login</string>
     <string name="please">Please sing to continue</string>
     <string name="signin">Sign In</string>
-    <string name="donthave">Dont have an account?</string>
+    <string name="donthave">Don\'t have an account?</string>
     <string name="signup">Sign Up</string>
     <string name="email">Email.Exemple@gmail.com</string>
     <string name="password">Password</string>
