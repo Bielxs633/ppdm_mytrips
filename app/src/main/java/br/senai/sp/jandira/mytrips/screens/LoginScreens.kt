@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.mytrips.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -24,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -101,6 +104,14 @@ fun loginScreen(modifier: Modifier = Modifier) {
                         text = stringResource(R.string.email)
                     )
                 },
+                leadingIcon = {
+                    Image(
+                        painter = painterResource(R.drawable.email),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(30.dp)
+                    )
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 66.dp),
@@ -114,6 +125,14 @@ fun loginScreen(modifier: Modifier = Modifier) {
                 label = {
                     Text(
                         text = stringResource(R.string.password)
+                    )
+                },
+                leadingIcon = {
+                    Image(
+                        painter = painterResource(R.drawable.padlock),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .size(30.dp)
                     )
                 },
                 modifier = Modifier
@@ -131,7 +150,7 @@ fun loginScreen(modifier: Modifier = Modifier) {
                 shape = RoundedCornerShape(10.dp)
             ){
                 Text(
-                    text = stringResource(R.string.singin),
+                    text = stringResource(R.string.signin),
                 )
                 Icon(
                     imageVector = Icons.Filled.ArrowForward,
@@ -154,7 +173,7 @@ fun loginScreen(modifier: Modifier = Modifier) {
                 )
                 // Cadastre-se:
                 Text(
-                    text = stringResource(R.string.singup),
+                    text = stringResource(R.string.signup),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF9900FF),
